@@ -24,9 +24,22 @@ Each section is at least one viewport tall (`min-height: 100svh`).
 - **SEO:** title, meta description, canonical, Open Graph tags, and JSON-LD with `Person`/`MusicGroup`, `MusicAlbum` and `MusicEvent`.
 - **Performance:** no JS, system fonts (no web-font download), tiny SVG images with fixed `width`/`height`.
 
-## Before submitting
+## Live site
 
-1. Public URL: https://zaba-la.github.io/artist-landing-page/
-2. Publish (e.g. GitHub Pages: *Settings → Pages → Deploy from branch → main*).
-3. Run the URL through https://pagespeed.web.dev/ and save the screenshot as `pagespeed-result.png`.
-4. Optional checks: https://validator.w3.org/ and https://validator.schema.org/
+**https://zaba-la.github.io/artist-landing-page/** (GitHub Pages, `main` branch)
+
+## Results
+
+| Check | Result |
+| --- | --- |
+| PageSpeed Insights — mobile | Performance 100 · Accessibility 100 · Best Practices 100 · SEO 100 |
+| PageSpeed Insights — desktop | Performance 100 · Accessibility 100 · Best Practices 100 · SEO 100 |
+| W3C HTML validator | 0 errors, 0 warnings |
+| W3C CSS validator | 0 errors, 0 warnings |
+| Schema.org validator | 0 errors, 0 warnings |
+
+Full report: https://pagespeed.web.dev/analysis/https-zaba-la-github-io-artist-landing-page/a03i3vhcjr
+
+![PageSpeed result (mobile)](pagespeed-result.png)
+
+![PageSpeed result (desktop)](pagespeed-result-desktop.png)
