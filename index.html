@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mara Solís | Singer-Songwriter · Official Website</title>
+  <meta name="description" content="Mara Solís is an indie-folk singer-songwriter. Discover her story, career milestones and upcoming live shows.">
+  <meta name="author" content="Mara Solís">
+  <meta name="theme-color" content="#1b1430">
+  <link rel="canonical" href="https://zaba-la.github.io/artist-landing-page/">
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Mara Solís | Singer-Songwriter">
+  <meta property="og:description" content="Indie-folk songs about places, people and the long road home. See upcoming shows.">
+  <meta property="og:image" content="https://zaba-la.github.io/artist-landing-page/images/portrait.svg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Schema.org structured data: the artist, her albums and upcoming events -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["Person", "MusicGroup"],
+        "@id": "https://zaba-la.github.io/artist-landing-page/#artist",
+        "name": "Mara Solís",
+        "url": "https://zaba-la.github.io/artist-landing-page/",
+        "image": "https://zaba-la.github.io/artist-landing-page/images/portrait.svg",
+        "description": "Indie-folk singer-songwriter and guitarist.",
+        "jobTitle": "Singer-Songwriter",
+        "genre": ["Indie Folk", "Singer-Songwriter"],
+        "birthPlace": { "@type": "Place", "name": "Valencia, Spain" },
+        "sameAs": [
+          "https://www.instagram.com/",
+          "https://open.spotify.com/",
+          "https://www.youtube.com/"
+        ],
+        "album": [
+          {
+            "@type": "MusicAlbum",
+            "name": "Salt & Cedar",
+            "datePublished": "2021",
+            "byArtist": { "@id": "https://zaba-la.github.io/artist-landing-page/#artist" }
+          },
+          {
+            "@type": "MusicAlbum",
+            "name": "Lanterns in the Fog",
+            "datePublished": "2024",
+            "byArtist": { "@id": "https://zaba-la.github.io/artist-landing-page/#artist" }
+          }
+        ]
+      },
+      {
+        "@type": "MusicEvent",
+        "name": "Mara Solís — Lanterns Tour: Madrid",
+        "startDate": "2026-11-14T21:00:00+01:00",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": "Sala El Sol",
+          "address": { "@type": "PostalAddress", "addressLocality": "Madrid", "addressCountry": "ES" }
+        },
+        "performer": { "@id": "https://zaba-la.github.io/artist-landing-page/#artist" },
+        "offers": { "@type": "Offer", "url": "https://zaba-la.github.io/artist-landing-page/#shows", "price": "22", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" }
+      },
+      {
+        "@type": "MusicEvent",
+        "name": "Mara Solís — Lanterns Tour: Barcelona",
+        "startDate": "2026-11-21T21:30:00+01:00",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": "Sala Apolo",
+          "address": { "@type": "PostalAddress", "addressLocality": "Barcelona", "addressCountry": "ES" }
+        },
+        "performer": { "@id": "https://zaba-la.github.io/artist-landing-page/#artist" },
+        "offers": { "@type": "Offer", "url": "https://zaba-la.github.io/artist-landing-page/#shows", "price": "24", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" }
+      },
+      {
+        "@type": "MusicEvent",
+        "name": "Mara Solís — Lanterns Tour: Lisbon",
+        "startDate": "2026-12-05T21:00:00+00:00",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": "Musicbox Lisboa",
+          "address": { "@type": "PostalAddress", "addressLocality": "Lisbon", "addressCountry": "PT" }
+        },
+        "performer": { "@id": "https://zaba-la.github.io/artist-landing-page/#artist" },
+        "offers": { "@type": "Offer", "url": "https://zaba-la.github.io/artist-landing-page/#shows", "price": "20", "priceCurrency": "EUR", "availability": "https://schema.org/LimitedAvailability" }
+      },
+      {
+        "@type": "MusicEvent",
+        "name": "Mara Solís — Winter Acoustic Session: Valencia",
+        "startDate": "2027-01-16T20:00:00+01:00",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": "Teatro Rambleta",
+          "address": { "@type": "PostalAddress", "addressLocality": "Valencia", "addressCountry": "ES" }
+        },
+        "performer": { "@id": "https://zaba-la.github.io/artist-landing-page/#artist" },
+        "offers": { "@type": "Offer", "url": "https://zaba-la.github.io/artist-landing-page/#shows", "price": "18", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Lets keyboard and screen reader users jump past the navigation -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="navbar__brand" href="#home" aria-label="Mara Solís, back to top">Mara Solís</a>
+      <ul class="navbar__list">
+        <li><a class="navbar__link" href="#about">About me</a></li>
+        <li><a class="navbar__link" href="#career">Career</a></li>
+        <li><a class="navbar__link navbar__link--cta" href="#shows">Upcoming shows</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero / cover -->
+    <section id="home" class="section hero" aria-labelledby="hero-title">
+      <div class="hero__content">
+        <p class="eyebrow">Indie-folk singer-songwriter</p>
+        <h1 id="hero-title" class="hero__title">Mara Solís</h1>
+        <p class="hero__lead">Songs about places, people and the long road home. New album <cite>Lanterns in the Fog</cite> out now.</p>
+        <div class="hero__actions">
+          <a class="button" href="#shows">See upcoming shows</a>
+          <a class="button button--ghost" href="#about">Get to know me</a>
+        </div>
+      </div>
+      <img class="hero__image" src="images/portrait.svg" width="420" height="520"
+           alt="Illustrated portrait of Mara Solís holding an acoustic guitar under a crescent moon"
+           fetchpriority="high">
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section about" aria-labelledby="about-title">
+      <div class="section__inner">
+        <h2 id="about-title" class="section__title">About me</h2>
+        <div class="about__grid">
+          <article class="card about__story">
+            <h3 class="card__title">The story so far</h3>
+            <p>I grew up in Valencia, between the sea and my grandmother's old record player. I picked up the guitar at twelve and haven't put it down since.</p>
+            <p>My songs mix Mediterranean folk with the quiet storytelling of North American songwriters. I write about small moments — a train window, a kitchen at 2&nbsp;a.m., a letter never sent — and try to make them feel big.</p>
+          </article>
+          <aside class="about__facts" aria-label="Quick facts">
+            <dl class="facts">
+              <div class="facts__item">
+                <dt>Based in</dt>
+                <dd>Valencia, Spain</dd>
+              </div>
+              <div class="facts__item">
+                <dt>Genre</dt>
+                <dd>Indie folk</dd>
+              </div>
+              <div class="facts__item">
+                <dt>Instruments</dt>
+                <dd>Voice, guitar, piano</dd>
+              </div>
+              <div class="facts__item">
+                <dt>Influences</dt>
+                <dd>Joni Mitchell, Silvia Pérez Cruz, Bon Iver</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Career -->
+    <section id="career" class="section career" aria-labelledby="career-title">
+      <div class="section__inner">
+        <h2 id="career-title" class="section__title">Career</h2>
+        <ol class="timeline">
+          <li class="timeline__item">
+            <article class="card">
+              <p class="card__meta"><time datetime="2018">2018</time></p>
+              <h3 class="card__title">First open mic</h3>
+              <p>Started playing open-mic nights in Valencia's Ruzafa neighbourhood and recorded a first demo at home.</p>
+            </article>
+          </li>
+          <li class="timeline__item">
+            <article class="card">
+              <p class="card__meta"><time datetime="2021">2021</time></p>
+              <h3 class="card__title">Debut album <cite>Salt &amp; Cedar</cite></h3>
+              <p>Self-released debut of ten songs. The single “Harbour Lights” reached one million streams.</p>
+            </article>
+          </li>
+          <li class="timeline__item">
+            <article class="card">
+              <p class="card__meta"><time datetime="2023">2023</time></p>
+              <h3 class="card__title">Festival stages</h3>
+              <p>Opened for touring acts across Spain and played my first summer festivals.</p>
+            </article>
+          </li>
+          <li class="timeline__item">
+            <article class="card">
+              <p class="card__meta"><time datetime="2024">2024</time></p>
+              <h3 class="card__title">Second album <cite>Lanterns in the Fog</cite></h3>
+              <p>Recorded live to tape with a small string section. Named one of the year's best folk records by independent radio.</p>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Upcoming shows -->
+    <section id="shows" class="section shows" aria-labelledby="shows-title">
+      <div class="section__inner">
+        <h2 id="shows-title" class="section__title">Upcoming shows</h2>
+        <ul class="shows__list">
+          <li>
+            <article class="show">
+              <time class="show__date" datetime="2026-11-14T21:00">
+                <span class="show__day">14</span>
+                <span class="show__month">Nov 2026</span>
+              </time>
+              <div class="show__info">
+                <h3 class="show__city">Madrid</h3>
+                <p class="show__venue">Sala El Sol · 21:00</p>
+              </div>
+              <a class="button button--small" href="#shows" aria-label="Buy tickets for Madrid, Sala El Sol, 14 November 2026">Tickets</a>
+            </article>
+          </li>
+          <li>
+            <article class="show">
+              <time class="show__date" datetime="2026-11-21T21:30">
+                <span class="show__day">21</span>
+                <span class="show__month">Nov 2026</span>
+              </time>
+              <div class="show__info">
+                <h3 class="show__city">Barcelona</h3>
+                <p class="show__venue">Sala Apolo · 21:30</p>
+              </div>
+              <a class="button button--small" href="#shows" aria-label="Buy tickets for Barcelona, Sala Apolo, 21 November 2026">Tickets</a>
+            </article>
+          </li>
+          <li>
+            <article class="show">
+              <time class="show__date" datetime="2026-12-05T21:00">
+                <span class="show__day">05</span>
+                <span class="show__month">Dec 2026</span>
+              </time>
+              <div class="show__info">
+                <h3 class="show__city">Lisbon</h3>
+                <p class="show__venue">Musicbox Lisboa · 21:00 · <strong>Few tickets left</strong></p>
+              </div>
+              <a class="button button--small" href="#shows" aria-label="Buy tickets for Lisbon, Musicbox Lisboa, 5 December 2026">Tickets</a>
+            </article>
+          </li>
+          <li>
+            <article class="show">
+              <time class="show__date" datetime="2027-01-16T20:00">
+                <span class="show__day">16</span>
+                <span class="show__month">Jan 2027</span>
+              </time>
+              <div class="show__info">
+                <h3 class="show__city">Valencia</h3>
+                <p class="show__venue">Teatro Rambleta · 20:00 · Acoustic session</p>
+              </div>
+              <a class="button button--small" href="#shows" aria-label="Buy tickets for Valencia, Teatro Rambleta, 16 January 2027">Tickets</a>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav aria-label="Social media">
+      <ul class="social">
+        <li><a href="https://www.instagram.com/" rel="noopener">Instagram</a></li>
+        <li><a href="https://open.spotify.com/" rel="noopener">Spotify</a></li>
+        <li><a href="https://www.youtube.com/" rel="noopener">YouTube</a></li>
+      </ul>
+    </nav>
+    <address class="site-footer__contact">
+      Booking: <a href="mailto:booking@example.com">booking@example.com</a>
+    </address>
+    <p class="site-footer__copy">&copy; 2026 Mara Solís. All rights reserved.</p>
+  </footer>
+</body>
+</html>

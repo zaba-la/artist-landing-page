@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520" role="img" aria-labelledby="t"><title id="t">Illustrated portrait of Mara Solís with an acoustic guitar</title>
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b2a6b"/><stop offset="1" stop-color="#f08a5d"/></linearGradient><linearGradient id="gtr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffcf8f"/><stop offset="1" stop-color="#c9773b"/></linearGradient></defs>
+<rect width="420" height="520" fill="url(#sky)"/>
+<circle cx="320" cy="95" r="42" fill="#fff4d6"/><circle cx="338" cy="83" r="38" fill="#4a3478"/>
+<g fill="#fff" opacity=".8"><circle cx="60" cy="60" r="2"/><circle cx="130" cy="110" r="1.5"/><circle cx="240" cy="50" r="2"/><circle cx="380" cy="190" r="1.5"/><circle cx="40" cy="180" r="1.5"/></g>
+<path d="M0 430 Q105 380 210 420 T420 400 V520 H0Z" fill="#1b1430" opacity=".55"/>
+<path d="M120 520 Q125 360 210 340 Q295 360 300 520Z" fill="#2a1f4a"/>
+<rect x="192" y="290" width="36" height="50" rx="12" fill="#e3a07a"/>
+<path d="M150 220 Q150 140 210 135 Q275 140 272 225 Q285 300 300 330 Q250 300 240 260 L180 260 Q170 300 120 330 Q140 290 150 220Z" fill="#2b1a12"/>
+<ellipse cx="210" cy="225" rx="50" ry="62" fill="#efb48c"/>
+<path d="M160 205 Q170 150 215 150 Q258 155 262 210 Q240 175 200 180 Q175 185 160 205Z" fill="#2b1a12"/>
+<g fill="#2b1a12"><ellipse cx="192" cy="228" rx="5" ry="6"/><ellipse cx="228" cy="228" rx="5" ry="6"/></g>
+<path d="M196 260 Q210 270 224 260" stroke="#a5523d" stroke-width="4" fill="none" stroke-linecap="round"/>
+<g transform="rotate(-28 210 430)"><rect x="200" y="250" width="20" height="150" rx="4" fill="#5a3a22"/><rect x="194" y="236" width="32" height="26" rx="6" fill="#3a2414"/><ellipse cx="210" cy="455" rx="72" ry="66" fill="url(#gtr)"/><ellipse cx="210" cy="400" rx="52" ry="46" fill="url(#gtr)"/><circle cx="210" cy="430" r="18" fill="#3a2414"/><rect x="185" y="480" width="50" height="8" rx="3" fill="#3a2414"/></g>
+</svg>

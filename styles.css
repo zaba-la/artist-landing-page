@@ -1,0 +1,507 @@
+/* ==========================================================================
+   Mara Solís — landing page styles
+   Layout: Flexbox only. Naming: BEM (block__element--modifier).
+   ========================================================================== */
+
+/* ---------- Design tokens ---------- */
+:root {
+  --color-bg: #1b1430;
+  --color-bg-alt: #241b3d;
+  --color-surface: #2f2550;
+  --color-text: #f5f0ff;
+  --color-muted: #c9bfe0;
+  --color-accent: #ffb86b;
+  --color-accent-dark: #1b1430;
+  --color-border: rgba(255, 255, 255, 0.12);
+
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+
+  --radius: 1rem;
+  --header-height: 4.5rem;
+  --max-width: 72rem;
+  --transition: 200ms ease;
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 var(--space-sm);
+  font-family: var(--font-serif);
+  line-height: 1.15;
+}
+
+p {
+  margin: 0 0 var(--space-sm);
+}
+
+a {
+  color: var(--color-accent);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+cite {
+  font-style: italic;
+}
+
+/* Visible focus for keyboard users on every interactive element */
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 0.25rem;
+}
+
+/* ---------- Skip link ---------- */
+.skip-link {
+  position: absolute;
+  top: var(--space-xs);
+  left: var(--space-xs);
+  z-index: 100;
+  padding: var(--space-xs) var(--space-sm);
+  color: var(--color-accent-dark);
+  background: var(--color-accent);
+  font-weight: 700;
+  transform: translateY(-200%);
+  transition: transform var(--transition);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* ---------- Header / navbar ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(27, 20, 48, 0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xs) var(--space-md);
+  max-width: var(--max-width);
+  min-height: var(--header-height);
+  margin: 0 auto;
+  padding: var(--space-xs) var(--space-md);
+}
+
+.navbar__brand {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.navbar__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs) var(--space-md);
+}
+
+.navbar__link {
+  color: var(--color-muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition);
+}
+
+.navbar__link:hover {
+  color: var(--color-text);
+}
+
+.navbar__link--cta {
+  padding: 0.35rem 0.9rem;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  border-radius: 999px;
+}
+
+/* ---------- Buttons ---------- */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.6rem;
+  font-weight: 700;
+  color: var(--color-accent-dark);
+  text-decoration: none;
+  background: var(--color-accent);
+  border: 2px solid var(--color-accent);
+  border-radius: 999px;
+  transition: transform var(--transition), background-color var(--transition), color var(--transition);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button--ghost {
+  color: var(--color-accent);
+  background: transparent;
+}
+
+.button--small {
+  padding: 0.5rem 1.2rem;
+  font-size: 0.95rem;
+}
+
+/* ---------- Shared section layout (one screen per section) ---------- */
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: calc(var(--header-height) + var(--space-lg)) var(--space-md) var(--space-xl);
+  scroll-margin-top: 0;
+}
+
+.section:nth-of-type(even) {
+  background-color: var(--color-bg-alt);
+}
+
+.section__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  width: 100%;
+  max-width: var(--max-width);
+}
+
+.section__title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0;
+}
+
+.section__title::after {
+  content: "";
+  display: block;
+  width: 3.5rem;
+  height: 4px;
+  margin-top: var(--space-xs);
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
+.eyebrow {
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* ---------- Card (reused by about + career) ---------- */
+.card {
+  height: 100%;
+  padding: var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  transition: transform var(--transition), border-color var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-accent);
+}
+
+.card__title {
+  font-size: 1.35rem;
+}
+
+.card__meta {
+  color: var(--color-accent);
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  flex-wrap: wrap;
+  gap: var(--space-xl);
+  padding-top: calc(var(--header-height) + var(--space-sm));
+  background:
+    radial-gradient(circle at 80% 20%, rgba(255, 184, 107, 0.18), transparent 45%),
+    radial-gradient(circle at 10% 90%, rgba(160, 120, 255, 0.25), transparent 50%),
+    var(--color-bg);
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 22rem;
+  max-width: 36rem;
+  animation: rise 800ms ease both;
+}
+
+.hero__title {
+  font-size: clamp(3rem, 10vw, 6rem);
+  margin-bottom: var(--space-sm);
+}
+
+.hero__lead {
+  font-size: 1.25rem;
+  color: var(--color-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.hero__image {
+  flex: 0 1 22rem;
+  border-radius: 50% 50% var(--radius) var(--radius);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.45);
+  animation: rise 800ms 150ms ease both;
+}
+
+/* ---------- About ---------- */
+.about__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+}
+
+.about__story {
+  flex: 2 1 24rem;
+  font-size: 1.125rem;
+}
+
+.about__facts {
+  flex: 1 1 16rem;
+}
+
+.facts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin: 0;
+}
+
+.facts__item {
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.facts dt {
+  color: var(--color-accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.facts dd {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+/* ---------- Career timeline ---------- */
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.timeline__item {
+  display: flex;
+  /* Basis chosen so cards lay out 4-across on desktop, 2x2 on tablets, stacked on phones */
+  flex: 1 1 15.5rem;
+}
+
+/* ---------- Shows ---------- */
+.shows__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.show {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  transition: border-color var(--transition);
+}
+
+.show:hover,
+.show:focus-within {
+  border-color: var(--color-accent);
+}
+
+.show__date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 5.5rem;
+  line-height: 1.1;
+}
+
+.show__day {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.show__month {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.show__info {
+  flex: 1 1 14rem;
+}
+
+.show__city {
+  margin-bottom: 0.25rem;
+  font-size: 1.5rem;
+}
+
+.show__venue {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.show__venue strong {
+  color: var(--color-accent);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-lg) var(--space-md);
+  color: var(--color-muted);
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.site-footer__contact {
+  font-style: normal;
+}
+
+.site-footer__copy {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* ---------- Animations ---------- */
+/* Transform-only (no opacity) so the hero still paints instantly and LCP isn't delayed */
+@keyframes rise {
+  from {
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 40rem) {
+  :root {
+    --header-height: 6.5rem;
+  }
+
+  .navbar,
+  .navbar__list {
+    justify-content: center;
+  }
+
+  .hero {
+    gap: var(--space-lg);
+    text-align: center;
+  }
+
+  .hero__actions {
+    justify-content: center;
+  }
+
+  .hero__image {
+    max-width: 16rem;
+  }
+}
